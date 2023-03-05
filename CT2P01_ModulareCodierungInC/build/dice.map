@@ -1313,8 +1313,8 @@ Memory Map of the image
     0x080036c3   0x080036c3   0x00000001   PAD
     0x080036c4   0x080036c4   0x00000094   Data   RO          254    .constdata          c_pu.l(bigflt0.o)
     0x08003758   0x08003758   0x00000010   Data   RO           55    .rodata.hal_ct_seg7_get_seg7.conv_tab  hal_ct_seg7.o
-    0x08003768   0x08003768   0x00000026   Data   RO           27    .rodata.str1.1      lcd.o
-    0x0800378e   0x0800378e   0x00000002   PAD
+    0x08003768   0x08003768   0x00000025   Data   RO           27    .rodata.str1.1      lcd.o
+    0x0800378d   0x0800378d   0x00000003   PAD
     0x08003790   0x08003790   0x00000020   Data   RO          427    Region$$Table       anon$$obj.o
     0x080037b0   0x080037b0   0x0000001c   Data   RO          262    locale$$data        c_pu.l(lc_numeric_c.o)
     0x080037cc   0x080037cc   0x00000110   Data   RO          291    locale$$data        c_pu.l(lc_ctype_c.o)
@@ -1346,7 +1346,7 @@ Image component sizes
       2440        124          0          0          0       8419   hal_gpio.o
        340         24          0          0          0       1922   hal_pwr.o
       1432        280          0          0          0       4768   hal_rcc.o
-       236         24         38          0          0       2358   lcd.o
+       236         24         37          0          0       2358   lcd.o
        168          4          0          0          0        880   main.o
         36          8        428          0       8192        844   startup_ctboard.o
        224          8          0          0          7       1132   statistics.o
@@ -1355,7 +1355,7 @@ Image component sizes
     ----------------------------------------------------------------------
       6768        800        516          4       8208      34122   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         0          0          2          3          9          0   (incl. Padding)
+         0          0          3          3          9          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 

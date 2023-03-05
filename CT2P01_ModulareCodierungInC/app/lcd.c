@@ -29,7 +29,7 @@
 #define NR_OF_CHAR_PER_LINE 20u
 
 #define LCD_CLEAR           "                    "
-#define TOTAL_THROW_TEXT    "total throws:"
+#define TOTAL_THROW_TEXT    "total throws"
 
 /// STUDENTS: To be programmed
 void write_string_to_lcd(uint8_t slot_nr_start, char string[])

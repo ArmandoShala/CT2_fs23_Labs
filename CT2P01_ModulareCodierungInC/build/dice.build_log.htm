@@ -27,9 +27,26 @@ Project File Date:  02/25/2023
 <h2>Output:</h2>
 *** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
+app/statistics.c(55): warning: no newline at end of file [-Wnewline-eof]
+/// END: To be programmed
+                         ^
+1 warning generated.
+compiling statistics.c...
+app/lcd.c(35): warning: no previous prototype for function 'write_string_to_lcd' [-Wmissing-prototypes]
+void write_string_to_lcd(uint8_t slot_nr_start, char string[])
+     ^
+app/lcd.c(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void write_string_to_lcd(uint8_t slot_nr_start, char string[])
+^
+static 
+app/lcd.c(67): warning: no newline at end of file [-Wnewline-eof]
+/// END: To be programmed
+                         ^
+2 warnings generated.
+compiling lcd.c...
 linking...
 Program Size: Code=13488 RO-data=1068 RW-data=4 ZI-data=8228  
-".\build\dice.axf" - 0 Error(s), 0 Warning(s).
+".\build\dice.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -89,7 +106,7 @@ Package Vendor: InES
       Include file:  Device/Include/reg_stm32f4xx.h
       Include file:  HAL/Include/hal_rcc.h
       Source file:   HAL/Source/hal_rcc.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>
