@@ -1,0 +1,131 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Armando Shala, RSA, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+\\Mac\iCloud\Development\zhaw\CLionProjects\CT2_fs23_Labs\CT2P05_lab_spi_2 - Copy\spi_display.uvprojx
+Project File Date:  03/25/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'SPI_Display'
+app/hal_spi.c(60): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+                uint16_t reg = 0x0000;
+                         ^
+app/hal_spi.c(99): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8_t received = SPI1->DR;
+                ~~~~~~~~   ~~~~~~^~
+app/hal_spi.c(99): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t received = SPI1->DR;
+                ^
+3 warnings generated.
+compiling hal_spi.c...
+app/lcd_io.c(64): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t bcc = 0x00;
+                ^
+app/lcd_io.c(107): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t ack = hal_spi_read_write(0x00);
+                ^
+app/lcd_io.c(134): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t ack = hal_spi_read_write(0x00);
+                ^
+3 warnings generated.
+compiling lcd_io.c...
+compiling cmd_touch.c...
+compiling cmd_lcd.c...
+app/hal_mocked.c(276): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+#endif // MOCKED_SPI_DISPLAY
+                            ^
+1 warning generated.
+compiling hal_mocked.c...
+assembling datainit_ctboard.s...
+app/hal_sbuf.c(43): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+    uint16_t input_port_a = GPIOA->IDR;
+             ~~~~~~~~~~~~   ~~~~~~~^~~
+1 warning generated.
+compiling hal_sbuf.c...
+compiling main.c...
+assembling startup_ctboard.s...
+compiling system_ctboard.c...
+compiling hal_pwr.c...
+compiling hal_fmc.c...
+compiling hal_gpio.c...
+compiling hal_rcc.c...
+linking...
+Program Size: Code=8682 RO-data=466 RW-data=0 ZI-data=8192  
+".\build\spi_display.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: InES
+                https://ennis.zhaw.ch/pack/InES.CTBoard14_DFP.4.0.3.pack
+                InES.CTBoard14_DFP.4.0.3
+                CT Board 14 (STM32F429ZI) Device Support
+   * Component: Startup Version: 4.0.3
+   * Component: FMC Version: 3.0.1
+   * Component: GPIO Version: 4.0.1
+   * Component: PWR Version: 2.2.0
+   * Component: RCC Version: 4.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_SPI_Display
+  C:/Users/armandoshala/AppData/Local/Arm/Packs/InES/CTBoard14_DFP/4.0.3/Device/Include
+  C:/Users/armandoshala/AppData/Local/Arm/Packs/InES/CTBoard14_DFP/4.0.3/Device/Include/m0
+  C:/Users/armandoshala/AppData/Local/Arm/Packs/InES/CTBoard14_DFP/4.0.3/HAL/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: InES::Device:Startup:4.0.3
+      Include file:  Device/Include/reg_stm32f4xx.h
+      Source file:   Device/Source/startup_ctboard.s
+      Source file:   Device/Source/datainit_ctboard.s
+      Include file:  Device/Include/m0/platform_ctboard.h
+      Include file:  Device/Include/reg_ctboard.h
+      Include file:  Device/Include/system_ctboard.h
+      Source file:   Device/Source/system_ctboard.c
+
+   * Component: InES::HAL:FMC:3.0.1
+      Include file:  HAL/Include/hal_common.h
+      Include file:  Device/Include/reg_stm32f4xx.h
+      Include file:  HAL/Include/hal_fmc.h
+      Source file:   HAL/Source/hal_fmc.c
+
+   * Component: InES::HAL:GPIO:4.0.1
+      Include file:  HAL/Include/hal_gpio.h
+      Include file:  HAL/Include/hal_common.h
+      Include file:  Device/Include/reg_stm32f4xx.h
+      Source file:   HAL/Source/hal_gpio.c
+
+   * Component: InES::HAL:PWR:2.2.0
+      Include file:  HAL/Include/hal_pwr.h
+      Source file:   HAL/Source/hal_pwr.c
+      Include file:  HAL/Include/hal_common.h
+      Include file:  Device/Include/reg_stm32f4xx.h
+
+   * Component: InES::HAL:RCC:4.0.1
+      Include file:  HAL/Include/hal_rcc.h
+      Include file:  Device/Include/reg_stm32f4xx.h
+      Include file:  HAL/Include/hal_common.h
+      Source file:   HAL/Source/hal_rcc.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
