@@ -1,0 +1,9 @@
+-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c
+-fno-rtti -funsigned-char
+-D__EVAL -gdwarf-4 -O0 -fno-function-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier
+-I./RTE/_Target_1
+-IC:/Users/armandoshala/AppData/Local/Arm/Packs/InES/CTBoard14_DFP/4.0.3/Device/Include
+-IC:/Users/armandoshala/AppData/Local/Arm/Packs/InES/CTBoard14_DFP/4.0.3/Device/Include/m0
+-IC:/Users/armandoshala/AppData/Local/Arm/Packs/InES/CTBoard14_DFP/4.0.3/HAL/Include
+-D__UVISION_VERSION="537" -D_RTE_ -D_RTE_
+-o ./build/timer.o -MD "app/timer.c"

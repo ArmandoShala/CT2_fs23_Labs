@@ -1,0 +1,10 @@
+executable("lab06") {
+  sources = [
+    "app/timer.c",
+    "app/main.c",
+  ]
+  deps = [
+    "//lib/device",
+    "//lib/hal",
+  ]
+}
