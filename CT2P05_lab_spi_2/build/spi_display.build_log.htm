@@ -21,12 +21,14 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
 Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
-\\Mac\iCloud\Development\zhaw\CLionProjects\CT2_fs23_Labs\CT2P05_lab_spi_2 - Copy\spi_display.uvprojx
+\\Mac\iCloud\Development\zhaw\CLionProjects\CT2_fs23_Labs\CT2P05_lab_spi_2\spi_display.uvprojx
 Project File Date:  03/25/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'SPI_Display'
+compiling cmd_lcd.c...
+compiling cmd_touch.c...
 app/hal_spi.c(60): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
                 uint16_t reg = 0x0000;
                          ^
@@ -49,20 +51,18 @@ app/lcd_io.c(134): warning: mixing declarations and code is incompatible with st
                 ^
 3 warnings generated.
 compiling lcd_io.c...
-compiling cmd_touch.c...
-compiling cmd_lcd.c...
 app/hal_mocked.c(276): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
 #endif // MOCKED_SPI_DISPLAY
                             ^
 1 warning generated.
 compiling hal_mocked.c...
-assembling datainit_ctboard.s...
 app/hal_sbuf.c(43): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
     uint16_t input_port_a = GPIOA->IDR;
              ~~~~~~~~~~~~   ~~~~~~~^~~
 1 warning generated.
 compiling hal_sbuf.c...
 compiling main.c...
+assembling datainit_ctboard.s...
 assembling startup_ctboard.s...
 compiling system_ctboard.c...
 compiling hal_pwr.c...
@@ -94,38 +94,38 @@ Package Vendor: InES
 <h2>Collection of Component Files used:</h2>
 
    * Component: InES::Device:Startup:4.0.3
+      Source file:   Device/Source/system_ctboard.c
       Include file:  Device/Include/reg_stm32f4xx.h
       Source file:   Device/Source/startup_ctboard.s
       Source file:   Device/Source/datainit_ctboard.s
-      Include file:  Device/Include/m0/platform_ctboard.h
-      Include file:  Device/Include/reg_ctboard.h
       Include file:  Device/Include/system_ctboard.h
-      Source file:   Device/Source/system_ctboard.c
+      Include file:  Device/Include/reg_ctboard.h
+      Include file:  Device/Include/m0/platform_ctboard.h
 
    * Component: InES::HAL:FMC:3.0.1
-      Include file:  HAL/Include/hal_common.h
       Include file:  Device/Include/reg_stm32f4xx.h
       Include file:  HAL/Include/hal_fmc.h
       Source file:   HAL/Source/hal_fmc.c
+      Include file:  HAL/Include/hal_common.h
 
    * Component: InES::HAL:GPIO:4.0.1
-      Include file:  HAL/Include/hal_gpio.h
       Include file:  HAL/Include/hal_common.h
       Include file:  Device/Include/reg_stm32f4xx.h
+      Include file:  HAL/Include/hal_gpio.h
       Source file:   HAL/Source/hal_gpio.c
 
    * Component: InES::HAL:PWR:2.2.0
+      Include file:  Device/Include/reg_stm32f4xx.h
+      Include file:  HAL/Include/hal_common.h
       Include file:  HAL/Include/hal_pwr.h
       Source file:   HAL/Source/hal_pwr.c
-      Include file:  HAL/Include/hal_common.h
-      Include file:  Device/Include/reg_stm32f4xx.h
 
    * Component: InES::HAL:RCC:4.0.1
       Include file:  HAL/Include/hal_rcc.h
-      Include file:  Device/Include/reg_stm32f4xx.h
       Include file:  HAL/Include/hal_common.h
+      Include file:  Device/Include/reg_stm32f4xx.h
       Source file:   HAL/Source/hal_rcc.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
